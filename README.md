@@ -44,8 +44,11 @@ Description of the files:
    - RootNumber.gp ---> timing of computing the L-function of a genus-2 curves
 
    - genus1rank2.dat | 
-   - genus2rank2.dat |---> the LMFDB data to estimate the logarithmic density of rank 2 curves. Numerically, one sees that it is larger
+   - genus2rank2.dat |---> the LMFDB data to estimate the logarithmic density of rank 2 curves.
+                            Numerically, one sees that it is larger
                             for genus-2 curves than for elliptic curves.
                             This  corroborates with the fact that Watkins conjectured
                              a logarithmic density of 3/4 for elliptic curves
                              and we prove a log. density >= 5/7 for genus-2 curves.
+     
+   - RubinSilverberg2001.sage ---> list of twists over Q(t) of rank 2 and 3 of given elliptic curves over Q. The scripts allow to test experimentally that the probability to have rank r0+r in a family of twists of rank r0 is the same as the probability to have rank r in the set of all twists 
