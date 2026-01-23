@@ -1,0 +1,13 @@
+
+gd := Open("Families-list.log","w");
+load "Stahlke16.m";
+CurveToRankAndHeight("Stahlke 16",f,[],gd:Qs:=Qs);
+load "Stoll22.m";
+CurveToRankAndHeight("Stoll 22",f,[],gd:Qs:=Qs);
+load "Dreier25.m";
+CurveToRankAndHeight("Dreier 25",f,[],gd:Qs:=Qs);
+load "Elkies26.m";
+CurveToRankAndHeight("Elkies 26",f,[],gd:Qs:=Qs);
+load "Elkies29gen2.m";
+CurveToRankAndHeight("Elkies 27",f,xs,gd);
+quit;
