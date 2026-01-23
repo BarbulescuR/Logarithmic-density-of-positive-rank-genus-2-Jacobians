@@ -14,12 +14,13 @@ Description of the files:
    - Stahlke16.m |
    - Stoll22.m   |
    - Dreier25.m  |---> |genus-2 curves with simple Jacobian which are defined over Q(t)
-   - Elkies26.m  |     |and have rank >= 16, 22, 25, 26 and respectively 27
+   - Elkies26.m  |              |and have rank >= 16, 22, 25, 26 and respectively 27
    - Elkies27.m  |
    
-                            |a function which, given two elliptic curves F and G
-   - GlueFullTorsion.m ---> |with full rational 2-tprsion over a field k, outputs
-                            |a genus-2 curve C defined over k such that Jac(C)=_k E1 x E2
+    - GlueFullTorsion.m --->  |a function which, given two elliptic curves F and G
+                              |with full rational 2-tprsion over a field k, outputs
+                              |a genus-2 curve C defined over k such that
+                              |Jac(C)=_k E1 x E2
    
    - Elkies15.m ---> an elliptic curve over Q of rank 15 with full rational 2-torsion
    
