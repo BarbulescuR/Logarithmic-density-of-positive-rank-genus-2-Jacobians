@@ -6,6 +6,8 @@
 
 by R. Barbulescu, M. Barcau, V. Pașol, and G. Turcaș.
 
+Software: Magma for *.m files, sage for *.sage and pari/gp for *.gp files.
+
 Description of the files:
 
    - utils.m ---> |a list of functions to compute the degree of a rational fraction 
