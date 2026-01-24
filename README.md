@@ -52,3 +52,6 @@ Description of the files:
                              and we prove a log. density >= 5/7 for genus-2 curves.
      
    - RubinSilverberg2001.sage ---> list of twists over Q(t) of rank 2 and 3 of given elliptic curves over Q. The scripts allow to test experimentally that the probability to have rank r0+r in a family of twists of rank r0 is the same as the probability to have rank r in the set of all twists 
+  
+   - search-non-torsion.m ---> the script searches examples as in Remark 2.2. For them alpha is rational and is non-torsion for all polynomials h(x) with coefficients in {0,&}.
+  
