@@ -1,4 +1,4 @@
-
+load "utils.m";
 gd := Open("Families-list.log","w");
 load "Stahlke16.m";
 CurveToRankAndHeight("Stahlke 16",f,[],gd:Qs:=Qs);
