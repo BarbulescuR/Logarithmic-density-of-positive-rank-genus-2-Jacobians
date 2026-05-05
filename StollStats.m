@@ -1,5 +1,8 @@
 load "RootNumber.m";
 
+print("usage: magma \"m:=3\" StollStats.m");
+print("the time needed is approximately 10 seconds per value of m");
+
 SetClassGroupBounds("GRH");
 
 m := StringToInteger(m);
