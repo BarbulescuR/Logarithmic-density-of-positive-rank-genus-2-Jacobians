@@ -206,4 +206,4 @@ Lan
 
 \\t1=gettime();foreach([1..100],i,computeL(1234567));t2=gettime();print(t2-t1)
 
-
+\\ example : computeL(2)
