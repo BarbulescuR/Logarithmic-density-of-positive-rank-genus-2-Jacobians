@@ -1,6 +1,7 @@
 /* stollhecke.gp */
 /* written by Aurel Page aurel.page@inria.fr */
-
+/* The script is unused but it illustrates how to use Stoll's work to compute the L-function */
+/* of a curve of the form y^2=x^5+a */
 
 
 /* The program is based on:
