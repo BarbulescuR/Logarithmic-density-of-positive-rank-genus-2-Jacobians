@@ -1,3 +1,9 @@
+# objective : illustrate the number of elliptic curves whose rank is >=2
+              NX=N(X) is defined as in the proof of Proposition 2.5 and 
+              N2X=N_2(X) is the subset of N(X) of curves of rank >=2.
+              This allows a comparison between genus 1 and genus 2.
+# reference : LMFDB, https://www.lmfdb.org/EllipticCurve/Q/
+
 log2X   NX          N2X     log2N2Xonlog2NX
 15      218216      13491   0.773
 16      433850      33578   0.802     
