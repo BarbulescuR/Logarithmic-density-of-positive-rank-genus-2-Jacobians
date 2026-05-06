@@ -1,5 +1,7 @@
 /*
-Roland Dreier. Examples of Genus 2 Curves over Q with Jacobians of High Mordell-Weil Rank. 1997. International Mathematics Research Notices.   
+ objective : auxiliary file used by HighRankSimpleJacobianExamples.m
+ reference : Roland Dreier. Examples of Genus 2 Curves over Q with Jacobians of High Mordell-Weil Rank. 1997.
+              International Mathematics Research Notices.   
 */
 
 
