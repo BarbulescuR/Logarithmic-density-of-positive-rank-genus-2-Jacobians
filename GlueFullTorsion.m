@@ -1,5 +1,6 @@
 /*
 objective : auxiliary file used in HighRankSplitJacobianExamples.m
+            It illustrates Proposition 2.18. 
 reference : Everett  W  Howe,  Franck  Lepr ́evost,  and  Bjorn  Poonen,  Large  torsion  subgroups  of
              splitJacobians of curves of genus two or three, Forum Mathematicum 3 (2000
 */
