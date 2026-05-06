@@ -1,3 +1,12 @@
+/*
+objective : make statistics for the genus tzo curves of eauqtion C_a: y^2=x^5+a. Each line is of the form (a,r)
+            where r is the rank of Jac(C_a). Since an early abort strategy is used, only some of the values of a
+			are written, mostly corresponding with the large values of r.
+			It uses and illustrates Section 3.2.1 in the article.
+reference : Matthew Bisatt, Root number of the Jacobian of y2= x^p+ a, Journal de th ́eorie des nombresde Bordeaux
+               34 (2022), no. 2, 575–582.
+*/
+
 load "RootNumber.m";
 
 print("usage: magma \"m:=3\" StollStats.m");
