@@ -19,6 +19,9 @@ xs := [-12, -11, -10, -9, -8, -4, -1, 1, 5, 8, 9, 10, 14, 18];
 B2 := XsToBs(xs);
 
 */
+
+load "PolySqrt.m";
+
 function XsToBs(xs)
     _<x> := PolynomialRing(Rationals());
     P := &*[(x-xi) : xi in xs];
@@ -26,3 +29,13 @@ function XsToBs(xs)
     B := -(P-A^2);
     return A,B; 
 end function;
+
+xs := [-12, -11, -10, -9, -6, -4, -3, 1, 2, 4, 6, 9, 11, 12];
+B3 := XsToBs(xs);
+C := HyperellipticCurve(B3);
+
+/*
+This script cannot be used because Genus(C) eq 3.
+*/
+
+
