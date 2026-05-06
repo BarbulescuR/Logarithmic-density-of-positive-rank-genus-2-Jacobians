@@ -1,3 +1,8 @@
+/*
+objective : verify the rank of the genus-2 curves in Appendix A.
+            It is used as auxiliary file in HighRankSimpleJacobianExamples.m
+			HighRankSplitJacobianExamples.m
+*/
 
 /*	
 EXAMPLE :
