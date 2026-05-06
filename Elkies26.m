@@ -1,6 +1,7 @@
 /*
-Noam Elkies. Curves of genus 2 with many rational points via K3 surfaces. 2008. 
-ACM Communications in Computer Algebra.
+objective : auxiliary file in HighRankSimpleJacobianExamples.m
+reference : Noam Elkies. Curves of genus 2 with many rational points via K3 surfaces. 2008. 
+            ACM Communications in Computer Algebra.
 */
 
 
