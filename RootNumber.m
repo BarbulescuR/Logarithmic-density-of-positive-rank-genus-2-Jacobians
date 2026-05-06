@@ -1,7 +1,8 @@
-// Journal de Théorie des Nombres de Bordeaux 34 (2022), 575–582 
-// Root number of the Jacobian of y2 = x^p + a
-// Matthuew Bisatt
-
+/*
+objective : auxiliary file used in StollStats.m
+reference : Matthuew Bisatt. Journal de Théorie des Nombres de Bordeaux 34 (2022), 575–582 
+             Root number of the Jacobian of y2 = x^p + a
+*/
 
 // RootNumber of Jac(Hyp(x^p+a))
 function RootNumber(a:p:=5)
