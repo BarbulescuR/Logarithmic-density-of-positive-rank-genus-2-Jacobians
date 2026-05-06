@@ -1,3 +1,8 @@
+/*
+objective : given a polynomial P, outputs Q and R such that deg(P-Q^2) < deg(Q).
+reference : the idea goes back to Mestre, see Leopoldo Kulesz. Courbes algébriques de genre ≥ 2
+              possédant de nombreux points rationnels. Acta Arithmetica. 1998.
+*/
 
 function PolySqrt(P)
     Qx := Parent(P);
