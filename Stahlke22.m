@@ -1,8 +1,6 @@
 /*
-objective : auxiliary file used in HighRankSimpleJacobianExamples.m
-reference : Jan M ̈uller and Michael Stoll, Canonical  heights  on  genus-2  Jacobians,
-                Algebra & NumberTheory 10 (2016), no. 10, 2153–2234. Record curve available online at 
-                https://www.mathe2.uni-bayreuth.de/stoll/recordcurve.html
+objective : attempt file which cannot be used in HighRankSimpleJacobianExamples.m
+reference : 
 */
 
 /*
