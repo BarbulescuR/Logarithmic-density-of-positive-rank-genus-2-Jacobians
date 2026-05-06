@@ -1,3 +1,10 @@
+/*
+objective : auxiliary file used in HighRankSplitJacobianExamples.m
+reference : Andrej Dujella and Juan Peral. High rank elliptic curves induced by rational diophantine triples.
+               Glasnik Matematicki. vol 55(75). 2020. 237-252
+            attributed to Julian Aguirre, Andrej Dujella and Juan Peral. On the rank of elliptic curves coming from
+            rational Diophantine triples. The Rocky Mountain journal of mathematics, 2012
+*/
 
 Qm<m> := PolynomialRing(Rationals());
 Qm<m> := FieldOfFractions(Qm);
