@@ -1,3 +1,9 @@
+/*
+objective : auxiliary file used in HighRankSimpleJacobianExamples.m
+reference : Jan M ̈uller and Michael Stoll, Canonical  heights  on  genus-2  Jacobians,
+                Algebra & NumberTheory 10 (2016), no. 10, 2153–2234. Record curve available online at 
+                https://www.mathe2.uni-bayreuth.de/stoll/recordcurve.html
+*/
 
 /*
 xs := [-12, -11, -9, -7, -6, -5, -2, 2, 3, 6, 7, 9, 16, 17];
