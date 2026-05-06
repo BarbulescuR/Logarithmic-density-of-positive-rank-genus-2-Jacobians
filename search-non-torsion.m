@@ -1,5 +1,8 @@
 /*
-Search examples for Remark 2.2.
+objective : Search examples of polynomials (f,h) such that Hyp(f,h)
+            has a point at infinity.
+reference : T. G. Berry, ‘On periodicity of continued fractions in hyperelliptic
+            function fields’,
 */
 
 Qx<x> := PolynomialRing(Rationals());
