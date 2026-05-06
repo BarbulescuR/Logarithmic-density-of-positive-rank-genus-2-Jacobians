@@ -1,3 +1,10 @@
+/*
+objective : auxiliary file used in HighRankSplitJacobianExamples.m
+            It is used to illustrate Lemma 2.18 in the article. 
+reference : Noam Elkies, Elliptic  curve  with  Mordell–weil  group Z/2Z× Z/2Z× Z^15, 2009.
+            Announce-ment to the Number Theory list server. Available online at 
+            https://web.math.pmf.unizg.hr/~duje/tors/z2z2.html.
+*/
 
 a4 := -1478818379630960182018543975144238479079598870400357903794; 
 a6 := 21612333371564362906227820064846376685227380006732368388851217276076518563786908263808;
