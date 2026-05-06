@@ -1,3 +1,7 @@
+/*
+objective : support lemma A.1 in the article
+*/
+
 load "utils.m";
 load "GlueFullTorsion.m";
 load "Elkies15.m";
