@@ -1,6 +1,7 @@
 /*
-Stephen Müller and Michael Stoll. Canonical heights of genus two curves. Algebra and Number Theory. Proposition 19.1.
-Available online at https://www.mathe2.uni-bayreuth.de/stoll/recordcurve.html 
+objective : auxiliary file used in HighRankSimpleJacobianExamples.m
+reference : Stephen Müller and Michael Stoll. Canonical heights of genus two curves. Algebra and Number Theory.
+             Available online at https://www.mathe2.uni-bayreuth.de/stoll/recordcurve.html 
 */
 
 name := "Stoll 22";
