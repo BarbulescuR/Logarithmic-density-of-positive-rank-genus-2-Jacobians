@@ -1,3 +1,9 @@
+/*
+objective : auxiliary file used in HighRankSplitJacobianExamples.m
+reference : Everett  W  Howe,  Franck  Lepr ́evost,  and  Bjorn  Poonen,  Large  torsion  subgroups  of
+             splitJacobians of curves of genus two or three, Forum Mathematicum 3 (2000
+*/
+
 function glue_full_torsion(f,g,roots_f,roots_g)
      Qx := Parent(f);
      g := Qx ! g;
