@@ -1,3 +1,9 @@
+/*
+objective : auxiliary file used in HighRankSimpleJacobianExamples.m
+reference : Noam Elkies, Simple genus-2 Jacobian of rank at least 29,
+             Message to the NMBRTHRY list. 2015. Available online at 
+             https://listserv.nodak.edu/cgi-bin/wa.exe?A2=ind1501&L=NMBRTHRY&P=R2
+*/
 
 _<x> := PolynomialRing(Rationals());
 f := 60516*x^6 + 1680225324*x^5 + 200663873413*x^4
