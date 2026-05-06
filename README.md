@@ -12,12 +12,14 @@ Description of the files:
 
    - utils.m ---> |a list of functions to compute the degree of a rational fraction 
                   |and the naive height of the largest coefficient
+   - PolySqrt.m ---> Given a polynomial P, computes a polynomial Q such that deg(P-Q^2) < deg(Q).
+
    
    - Stahlke16.m |
    - Stoll22.m   |
    - Dreier25.m  |
    - Elkies26.m  |                 
-   - Elkies27.m  |---> |genus-2 curves with simple Jacobian defined over Q(t) of rank >= 16, 22, 25, 26 and respectively 27
+   - Elkies29gen2.m  |---> |genus-2 curves with simple Jacobian defined over Q(t) of rank >= 16, 22, 25, 26 and respectively 29
    
     - GlueFullTorsion.m --->  |a function which, given two elliptic curves F and G
                               |with full rational 2-tprsion over a field k, outputs
@@ -28,7 +30,7 @@ Description of the files:
    
    - Kihara6.m ---> an elliptic curve over Q(t) of rank 6 with full rational 2-torsion
 
-   - HightRankSimpleJacobianExamples.m ---> a list of examples of genus-2 curves from the literature and an evaluation of their naive height
+   - HighRankSimpleJacobianExamples.m ---> a list of examples of genus-2 curves from the literature and an evaluation of their naive height
     
    - HightRankSimpleJacobianExamples.m --->
                      two examples of genus-2 curves with split Jacobian obtained by gluing from elliptic curves with full 2-torsion
