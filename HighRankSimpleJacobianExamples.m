@@ -1,3 +1,7 @@
+/*
+objective : illustrate the table at the end of Appendix A.1
+*/
+
 load "utils.m";
 gd := Open("Families-list.log","w");
 load "Stahlke16.m";
