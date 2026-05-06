@@ -1,5 +1,7 @@
-// Shoichi Kihara. On the rank of elliptic curves with three rational points of order 2. (III) (2004)
-
+/*
+objective : auxiliary file used in HighRankSplitJacobianExamples.m
+reference : Shoichi Kihara. On the rank of elliptic curves with three rational points of order 2. (III) (2004)
+*/
 
 Rt<t> := PolynomialRing(Rationals());
 Qt<t> := FieldOfFractions(Rt);
