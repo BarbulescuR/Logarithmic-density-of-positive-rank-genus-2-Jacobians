@@ -1,6 +1,6 @@
 /*
 objective : attempt file which cannot be used in HighRankSimpleJacobianExamples.m
-reference : 
+reference : Colin Stahlke, Algebraic curves over Q with many rational points and minimal automorphism group, International Mathematics Research Notices, 1997.
 */
 
 /*
