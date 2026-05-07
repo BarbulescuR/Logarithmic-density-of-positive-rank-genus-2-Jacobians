@@ -17,8 +17,6 @@ Core examples:
 Optional examples:
 - PARI/GP, version 2.17.2 in the latest validation environment, for `.gp` timing/comparison files.
 
-No Sage script is present in the current repository tree.
-
 ## Quick start with Magma
 
 ```bash
@@ -58,6 +56,8 @@ The Python driver is preferred because it logs commands and output and avoids ov
 - `HighRankSplitJacobianExamples.m` supports Appendix A.2 / Lemma A.1.
 - `StollStats.m` supports the optional Section 3.2.1 computations for `C_a : y^2 = x^5 + a`.
 - `stollhecke.gp` is optional and illustrates a Hecke-character approach; it is not part of the default reproduction path.
+
+The latest validation experiments were run on `lehner`, a University of Warwick machine. We thank John Cremona for providing one of the authors access to this server.
 
 ## File inventory
 

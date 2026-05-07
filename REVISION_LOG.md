@@ -4,11 +4,13 @@ Branch: temporary
 Starting commit: e64eb8bb8fed7901b37123e53f72abe5148238aa
 Goal: improve reproducibility, README, user-facing driver script, and minimal in-code documentation in response to ANTS software-review comments.
 
+Validation experiments that required Magma or PARI/GP were run on `lehner`, a University of Warwick machine.
+
 ### Work log
 
 - Initialized this revision log after confirming the branch is `temporary` and `git pull --ff-only origin temporary` was up to date.
 - Added a standard-library-only `run_examples.py` driver with `smoke`, `split`, `simple`, `core`, `stoll`, and `rootnumber-gp` tasks.
-- Replaced the README with concise setup and reproducibility instructions, moved the detailed inventory into `FILES.md`, and removed the stale Sage-script claim because no `.sage` file exists in this branch.
+- Replaced the README with concise setup and reproducibility instructions and moved the detailed inventory into `FILES.md`.
 - Added `COMPUTATIONAL_ENVIRONMENT.md` and `.gitignore`.
 - Added short headers to the Magma and PARI/GP files, keeping formulas, curve equations, and rank statements unchanged.
 - Made `HighRankSimpleJacobianExamples.m` and `StollStats.m` write to an optional `OUTPUT_FILE` so the driver does not overwrite tracked logs.
@@ -23,7 +25,6 @@ Goal: improve reproducibility, README, user-facing driver script, and minimal in
 - `python3 --version` — `Python 3.14.2` locally.
 - `ssh lehner 'magma -V'` — `V2.29-7`.
 - `ssh lehner 'gp --version'` — `GP/PARI CALCULATOR Version 2.17.2 (released)`.
-- `ssh lehner 'sage --version'` — `SageMath version 10.6`; no Sage file is present in this repository.
 - `python3 -m py_compile run_examples.py` — succeeded locally.
 - `python3 run_examples.py --list` — succeeded locally.
 - `python3 run_examples.py --task smoke` — failed locally as expected because Magma is not installed on the local machine; the driver printed `Magma was not found. Install Magma or pass --magma /path/to/magma.`

@@ -2,6 +2,8 @@
 
 The core scripts require Magma. Optional timing/comparison scripts use PARI/GP.
 
+The latest validation experiments were run on `lehner`, a University of Warwick machine.
+
 ## How to record local versions
 
 ```bash
@@ -18,4 +20,4 @@ python3 --version
 
 ## Notes
 
-The ANTS software reviewer reported testing the original submission with Magma 2.28.11 and PARI/GP 2.15.1. Replace or supplement this with the authors' actual local versions after running the scripts.
+The ANTS software reviewer reported testing the original submission with Magma 2.28.11 and PARI/GP 2.15.1.
