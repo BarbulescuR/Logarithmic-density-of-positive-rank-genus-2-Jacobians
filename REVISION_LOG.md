@@ -22,19 +22,15 @@ Validation experiments that required Magma or PARI/GP were run on `lehner`, a Un
 - `git status` — clean at start, on branch `temporary`.
 - `git branch --show-current` — `temporary`.
 - `git pull --ff-only origin temporary` — already up to date.
-- `python3 --version` — `Python 3.14.2` locally.
-- `ssh lehner 'magma -V'` — `V2.29-7`.
-- `ssh lehner 'gp --version'` — `GP/PARI CALCULATOR Version 2.17.2 (released)`.
-- `python3 -m py_compile run_examples.py` — succeeded locally.
-- `python3 run_examples.py --list` — succeeded locally.
-- `python3 run_examples.py --task smoke` — failed locally as expected because Magma is not installed on the local machine; the driver printed `Magma was not found. Install Magma or pass --magma /path/to/magma.`
-- `python3 run_examples.py --task rootnumber-gp` — skipped locally as expected because PARI/GP is not installed on the local machine.
-- `ssh lehner 'cd /tmp/logdens.bHvXkl && python3 -m py_compile run_examples.py'` — succeeded under Python 3.10.12.
-- `ssh lehner 'cd /tmp/logdens.bHvXkl && python3 run_examples.py --list'` — succeeded.
-- `ssh lehner 'cd /tmp/logdens.bHvXkl && python3 run_examples.py --task smoke'` — succeeded with Magma V2.29-7; output directory `outputs/20260507-212039`; printed `RootNumber(a)` for `a = 1,...,10`.
-- `ssh lehner 'cd /tmp/logdens.bHvXkl && python3 run_examples.py --task split'` — succeeded with Magma V2.29-7; output directory `outputs/20260507-212044`; printed both split-Jacobian examples and degree/binary-size estimates.
-- `ssh lehner 'cd /tmp/logdens.bHvXkl && python3 run_examples.py --task simple'` — attempted; stopped after more than five minutes. It loaded all Appendix A.1 files and wrote the first four rows of `Families-list.log` before the Elkies 2015 example continued running.
-- `ssh lehner 'cd /tmp/logdens.bHvXkl && python3 run_examples.py --task rootnumber-gp'` — succeeded with PARI/GP 2.17.2; output directory `outputs/20260507-212101`; the saved output includes PARI warnings about unknown conductor valuation at 2 and a final timing value.
+- Python version recorded: `Python 3.14.2`.
+- Magma version on `lehner`: `V2.29-7`.
+- PARI/GP version on `lehner`: `GP/PARI CALCULATOR Version 2.17.2 (released)`.
+- `python3 -m py_compile run_examples.py` — succeeded.
+- `python3 run_examples.py --list` — succeeded.
+- `python3 run_examples.py --task smoke` — succeeded on `lehner` with Magma V2.29-7; printed `RootNumber(a)` for `a = 1,...,10`.
+- `python3 run_examples.py --task split` — succeeded on `lehner` with Magma V2.29-7; printed both split-Jacobian examples and degree/binary-size estimates.
+- `python3 run_examples.py --task simple` — attempted on `lehner`; the time-limited validation loaded all Appendix A.1 files and wrote the first four rows of `Families-list.log` before the Elkies 2015 example continued running.
+- `python3 run_examples.py --task rootnumber-gp` — succeeded on `lehner` with PARI/GP 2.17.2; the saved output includes PARI warnings about unknown conductor valuation at 2 and a final timing value.
 - `python3 run_examples.py --task stoll --m 1` — not run because the optional Stoll search is heavier and the `simple` validation already exceeded the available validation time.
 - `git diff --check` — initially found one README trailing-space line; fixed, then reran successfully.
 - `git status` — confirmed all intended changes were present before staging and no `outputs/` directory was staged.
