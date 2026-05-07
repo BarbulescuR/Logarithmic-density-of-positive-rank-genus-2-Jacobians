@@ -1,9 +1,10 @@
 /*
-objective : auxiliary file used in HighRankSplitJacobianExamples.m
-reference : Andrej Dujella and Juan Peral. High rank elliptic curves induced by rational diophantine triples.
-               Glasnik Matematicki. vol 55(75). 2020. 237-252
-            attributed to Julian Aguirre, Andrej Dujella and Juan Peral. On the rank of elliptic curves coming from
-            rational Diophantine triples. The Rocky Mountain journal of mathematics, 2012
+Purpose: Dujella-Peral elliptic-curve family used in a split-Jacobian gluing example.
+Paper location: Appendix A.2 / Lemma A.1 input for HighRankSplitJacobianExamples.m.
+Usage: load "DujellaPeral2014.m";
+Output: defines E2 and rational points used as supporting data.
+Reference: Andrej Dujella and Juan Peral, High rank elliptic curves induced by
+rational Diophantine triples, Glasnik Matematicki 55(75), 2020, 237-252.
 */
 
 Qm<m> := PolynomialRing(Rationals());
@@ -44,5 +45,4 @@ bool5,y5 := IsSquare(Evaluate(f,x5));
 P5 := E2 ! [x5,y5];
 
 //print "Verification passed.";
-
 

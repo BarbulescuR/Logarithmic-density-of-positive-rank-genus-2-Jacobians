@@ -1,7 +1,10 @@
 /*
-objective : auxiliary file in HighRankSimpleJacobianExamples.m
-reference : Noam Elkies. Curves of genus 2 with many rational points via K3 surfaces. 2008. 
-            ACM Communications in Computer Algebra.
+Purpose: Elkies genus-2 curve data used by HighRankSimpleJacobianExamples.m.
+Paper location: Appendix A.1 curve/example data file.
+Usage: load "Elkies26.m";
+Output: defines f, C, Ps, and Qs for the rank/height helper.
+Reference: Noam Elkies, Curves of genus 2 with many rational points via K3 surfaces,
+ACM Communications in Computer Algebra, 2008.
 */
 
 

@@ -1,6 +1,10 @@
 /*
-objective : auxiliary file used in HighRankSplitJacobianExamples.m
-reference : Shoichi Kihara. On the rank of elliptic curves with three rational points of order 2. (III) (2004)
+Purpose: Kihara elliptic-curve family used in a split-Jacobian gluing example.
+Paper location: Appendix A.2 / Lemma A.1 input for HighRankSplitJacobianExamples.m.
+Usage: load "Kihara6.m";
+Output: defines E2 over Q(t) for the gluing computation.
+Reference: Shoichi Kihara, On the rank of elliptic curves with three rational
+points of order 2. (III), 2004.
 */
 
 Rt<t> := PolynomialRing(Rationals());
@@ -26,5 +30,4 @@ E2 := EllipticCurve(X*(X^2+X*B+C));
 
 // Degree(B),PolySize(B) 72 67.3736754654471622040206472595
 // Degree(C),PolySize(C) 108 103.001803366946424824967352250
-
 

@@ -1,7 +1,10 @@
 /*
- objective : auxiliary file used by HighRankSimpleJacobianExamples.m
- reference : Roland Dreier. Examples of Genus 2 Curves over Q with Jacobians of High Mordell-Weil Rank. 1997.
-              International Mathematics Research Notices.   
+Purpose: Dreier genus-2 curve data used by HighRankSimpleJacobianExamples.m.
+Paper location: Appendix A.1 curve/example data file.
+Usage: load "Dreier25.m";
+Output: defines f, C, Ps, and Qs for the rank/height helper.
+Reference: Roland Dreier, Examples of Genus 2 Curves over Q with Jacobians
+of High Mordell-Weil Rank, International Mathematics Research Notices, 1997.
 */
 
 
@@ -16,5 +19,4 @@ Qs := [Ps[i]-Ps[1] : i in [2..#Ps]];
 
 //xs := [-42, -22, -18, -15, -9, -8, -3, 3, 4, 5, 7, 9, 15, 16, 1147, -1/2,\
  177/2, -102/7, 108/7, -22/9, -9/11, 151/13, -88/17, -2811/22, 249/22];
-
 

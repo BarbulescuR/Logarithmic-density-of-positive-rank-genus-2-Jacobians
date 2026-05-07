@@ -1,8 +1,10 @@
 /*
-objective : make statistics of the rank of Jac(C_a) where C_a:y^2=x^5+a
-            It uses a naive method to be compared to stollhecke.gp
-reference : B. Allombert. Defining L-functions in GP. 2018. Available online
-            at https://pari.math.u-bordeaux.fr/Events/PARI2018/talks/lfun.pdf
+Optional file.
+Purpose: PARI/GP timing comparison for genus-2 L-function setup.
+Paper location: optional comparison script; not part of the default reproducibility workflow.
+Usage: gp -q RootNumber.gp
+Output: prints the elapsed time for the loop.
+Reference: B. Allombert, Defining L-functions in GP, 2018.
 */
 
 t1=gettime();

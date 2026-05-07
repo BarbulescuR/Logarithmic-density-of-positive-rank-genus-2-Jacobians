@@ -1,8 +1,10 @@
-/* stollhecke.gp */
-/* written by Aurel Page aurel.page@inria.fr */
-/* The script is unused but it illustrates how to use Stoll's work to compute the L-function */
-/* of a curve of the form y^2=x^5+a */
-/* requires version 2.15 */
+/* Optional file.
+   Purpose: illustrates a Hecke-character computation for curves y^2 = x^5 + A.
+   Paper location: optional Section 3.2.1-related computation; not part of the default workflow.
+   Usage: load into PARI/GP and call the helper functions manually.
+   Output: defines Hecke-character and L-function helper functions.
+   Author: Aurel Page, aurel.page@inria.fr.
+   Requires PARI/GP 2.15 or later. */
 
 
 /* The program is based on:

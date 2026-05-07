@@ -1,7 +1,11 @@
 /*
-objective : given a polynomial P, outputs Q and R such that deg(P-Q^2) < deg(Q).
-reference : the idea goes back to Mestre, see Leopoldo Kulesz. Courbes algébriques de genre ≥ 2
-              possédant de nombreux points rationnels. Acta Arithmetica. 1998.
+Purpose: helper that computes the polynomial part Q of a square root expansion.
+Paper location: helper file used by exploratory searches.
+Usage: load "PolySqrt.m";
+Output: defines PolySqrt(P), with deg(P - Q^2) small.
+Reference: the idea goes back to Mestre; see Leopoldo Kulesz,
+Courbes algébriques de genre >= 2 possédant de nombreux points rationnels,
+Acta Arithmetica, 1998.
 */
 
 function PolySqrt(P)
@@ -15,4 +19,3 @@ function PolySqrt(P)
     P2 := Qx ! Reverse(Eltseq(P2_+O(X)));
     return P2;
 end function;
-

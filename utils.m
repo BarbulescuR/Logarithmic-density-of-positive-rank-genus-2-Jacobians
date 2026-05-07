@@ -1,7 +1,8 @@
 /*
-objective : verify the rank of the genus-2 curves in Appendix A.
-            It is used as auxiliary file in HighRankSimpleJacobianExamples.m
-			HighRankSplitJacobianExamples.m
+Purpose: helper routines for the Appendix A rank/height summaries and size estimates.
+Paper location: helper file loaded by HighRankSimpleJacobianExamples.m and HighRankSplitJacobianExamples.m.
+Usage: load "utils.m";
+Output: defines CurveToRankAndHeight, PolySqrt, XsToBs, FractionNorm, Size, and PolySize.
 */
 
 /*	
@@ -11,15 +12,6 @@ load "Stahlke16.m";
 CurveToRankAndHeight("Stahlke 16",f,[],gd:Qs:=Qs);
 */	
 procedure CurveToRankAndHeight(name,f,xs,gd:Qs:=[])
-    function iSqrt(r)
-       p := Numerator(r); 
-       q := Denominator(r); 
-       sp := Rationals() ! (Integers() ! Sqrt(p));
-       sq := Rationals() ! (Integers() ! Sqrt(q));
-       return sp/sq;
-    end function;
-
-
     C := HyperellipticCurve(f);
     J := Jacobian(C);
 
@@ -27,10 +19,14 @@ procedure CurveToRankAndHeight(name,f,xs,gd:Qs:=[])
     if Qs eq [] then
         Ps := [];
         x0 := xs[1];
-        P0 := C ! [x0,iSqrt(Evaluate(f,x0))];
+        bool, y0 := IsSquare(Evaluate(f, x0));
+        assert bool;
+        P0 := C ! [x0, y0];
         for i in [2..#xs] do
             xi := xs[i];
-            P := C ! [xi,iSqrt(Evaluate(f,xi))];
+            bool, yi := IsSquare(Evaluate(f, xi));
+            assert bool;
+            P := C ! [xi, yi];
             Q := P-P0;
     	Append(~Ps,P);
             Append(~Qs,Q);

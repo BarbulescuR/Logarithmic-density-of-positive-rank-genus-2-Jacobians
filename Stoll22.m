@@ -1,7 +1,10 @@
 /*
-objective : auxiliary file used in HighRankSimpleJacobianExamples.m
-reference : Stephen Müller and Michael Stoll. Canonical heights of genus two curves. Algebra and Number Theory.
-             Available online at https://www.mathe2.uni-bayreuth.de/stoll/recordcurve.html 
+Purpose: Mueller-Stoll genus-2 curve data used by HighRankSimpleJacobianExamples.m.
+Paper location: Appendix A.1 curve/example data file.
+Usage: load "Stoll22.m";
+Output: defines f, C, Ps, and Qs for the rank/height helper.
+Reference: Stephen Mueller and Michael Stoll, Canonical heights of genus two curves,
+Algebra and Number Theory; see https://www.mathe2.uni-bayreuth.de/stoll/recordcurve.html.
 */
 
 name := "Stoll 22";
