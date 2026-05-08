@@ -59,6 +59,10 @@ The Python driver is preferred because it logs commands and output and avoids ov
 
 The latest validation experiments were run on `lehner`, a University of Warwick machine. We thank John Cremona for providing one of the authors access to this server.
 
+## Documentation note
+
+The Python driver script and the repository documentation polish in this revision were prepared with assistance from GPT-5.5 (OpenAI Codex).
+
 ## File inventory
 
 See [`FILES.md`](FILES.md).

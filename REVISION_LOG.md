@@ -16,6 +16,7 @@ Validation experiments that required Magma or PARI/GP were run on `lehner`, a Un
 - Made `HighRankSimpleJacobianExamples.m` and `StollStats.m` write to an optional `OUTPUT_FILE` so the driver does not overwrite tracked logs.
 - Repaired `Elkies29gen2.m` conservatively by removing the unfinished helper and loop, leaving only `f`, `C`, and `xs`.
 - Updated `utils.m` so `CurveToRankAndHeight` asserts rational square values with `IsSquare` before constructing points from `xs`.
+- Added a README documentation note disclosing that the Python driver and documentation polish were prepared with assistance from GPT-5.5 (OpenAI Codex).
 
 ### Validation
 
@@ -29,9 +30,10 @@ Validation experiments that required Magma or PARI/GP were run on `lehner`, a Un
 - `python3 run_examples.py --list` — succeeded.
 - `python3 run_examples.py --task smoke` — succeeded on `lehner` with Magma V2.29-7; printed `RootNumber(a)` for `a = 1,...,10`.
 - `python3 run_examples.py --task split` — succeeded on `lehner` with Magma V2.29-7; printed both split-Jacobian examples and degree/binary-size estimates.
-- `python3 run_examples.py --task simple` — attempted on `lehner`; the time-limited validation loaded all Appendix A.1 files and wrote the first four rows of `Families-list.log` before the Elkies 2015 example continued running.
+- `python3 run_examples.py --task simple` — succeeded on `lehner` with Magma V2.29-7 in 425.77 seconds; wrote all five Appendix A.1 summary rows to `Families-list.log`.
 - `python3 run_examples.py --task rootnumber-gp` — succeeded on `lehner` with PARI/GP 2.17.2; the saved output includes PARI warnings about unknown conductor valuation at 2 and a final timing value.
-- `python3 run_examples.py --task stoll --m 1` — not run because the optional Stoll search is heavier and the `simple` validation already exceeded the available validation time.
+- `python3 run_examples.py --task stoll --m 1` — run on `lehner` for the eight-hour validation cap; it produced a partial `stoll-1.log` with 73 candidate lines before the timeout stopped the still-running Magma computation.
+- The long runtime is consistent with the script's repeated rational-point searches and the expensive `MordellWeilGroup(J)` computations for selected Jacobians.
 - `git diff --check` — initially found one README trailing-space line; fixed, then reran successfully.
 - `git status` — confirmed all intended changes were present before staging and no `outputs/` directory was staged.
 
