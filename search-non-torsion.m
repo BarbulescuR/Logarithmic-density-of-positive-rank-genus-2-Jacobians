@@ -1,8 +1,10 @@
 /*
-objective : Search examples of polynomials (f,h) such that Hyp(f,h)
-            has a point at infinity.
-reference : T. G. Berry, ‘On periodicity of continued fractions in hyperelliptic
-            function fields’,
+Purpose: optional search for examples related to Remark 2.2.
+Paper location: optional/exploratory; not part of the default reproducibility workflow.
+Usage: magma search-non-torsion.m
+Output: prints a coefficient vector when it finds a suitable example.
+Reference: T. G. Berry, On periodicity of continued fractions in hyperelliptic
+function fields.
 */
 
 Qx<x> := PolynomialRing(Rationals());
@@ -28,5 +30,4 @@ for a in CartesianPower([0,2],7) do
     	break;
     end if;
 end for;
-
 

@@ -1,6 +1,10 @@
 /*
-objective : attempt file which cannot be used in HighRankSimpleJacobianExamples.m
-reference : Colin Stahlke, Algebraic curves over Q with many rational points and minimal automorphism group, International Mathematics Research Notices, 1997.
+Purpose: exploratory Stahlke-related attempt file.
+Paper location: optional/exploratory; not part of the default reproducibility workflow.
+Usage: magma Stahlke22.m
+Output: constructs a trial curve and records that the genus is not suitable for the main script.
+Reference: Colin Stahlke, Algebraic curves over Q with many rational points
+and minimal automorphism group, International Mathematics Research Notices, 1997.
 */
 
 /*
@@ -35,5 +39,4 @@ C := HyperellipticCurve(B3);
 /*
 This script cannot be used because Genus(C) eq 3.
 */
-
 

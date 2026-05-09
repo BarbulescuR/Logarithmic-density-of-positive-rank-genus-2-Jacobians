@@ -1,9 +1,10 @@
 /*
-objective : auxiliary file used in HighRankSplitJacobianExamples.m
-            It is used to illustrate Lemma 2.18 in the article. 
-reference : Noam Elkies, Elliptic  curve  with  Mordell–weil  group Z/2Z× Z/2Z× Z^15, 2009.
-            Announce-ment to the Number Theory list server. Available online at 
-            https://web.math.pmf.unizg.hr/~duje/tors/z2z2.html.
+Purpose: Elkies rank-15 elliptic curve with full rational 2-torsion.
+Paper location: Appendix A.2 / Lemma A.1 input for the gluing examples.
+Usage: load "Elkies15.m";
+Output: defines E1 and listed rational torsion and independent points.
+Reference: Noam Elkies, elliptic curve with Mordell-Weil group
+Z/2Z x Z/2Z x Z^15, 2009; see https://web.math.pmf.unizg.hr/~duje/tors/z2z2.html.
 */
 
 a4 := -1478818379630960182018543975144238479079598870400357903794; 
@@ -33,5 +34,4 @@ P12 := E1![40442125414745602621502494162, 52869197457474224601695891897613903629
 P13 := E1![24943293985561753095203275747, 494620041717645188762260334392615608575364];
 P14 := E1![266053292109858198648954299847, 135869710793553829756471002267336612487527489];
 P15 := E1![1872527673822446130016910594397, 2561836921226411679741258783032933091672508614];
-
 

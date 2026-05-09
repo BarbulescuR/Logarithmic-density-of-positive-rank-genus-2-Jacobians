@@ -1,21 +1,31 @@
 /*
-objective : make statistics for the genus tzo curves of eauqtion C_a: y^2=x^5+a. Each line is of the form (a,r)
-            where r is the rank of Jac(C_a). Since an early abort strategy is used, only some of the values of a
-			are written, mostly corresponding with the large values of r.
-			It uses and illustrates Section 3.2.1 in the article.
-reference : Matthew Bisatt, Root number of the Jacobian of y2= x^p+ a, Journal de th ́eorie des nombresde Bordeaux
-               34 (2022), no. 2, 575–582.
+Purpose: optional search/statistics for C_a : y^2 = x^5 + a, used in Section 3.2.1.
+Usage: magma "m:=3" StollStats.m
+Optional variables:
+  m           block number; block m searches a in [(m-1)*1000+1, 1000*m]
+  OUTPUT_FILE output log; default stoll-<m>.log
+Output: lines "a r", where r is Magma's computed Mordell-Weil rank for selected candidates.
 */
 
 load "RootNumber.m";
 
-print("usage: magma \"m:=3\" StollStats.m");
-print("the time needed is approximately 10 seconds per value of m");
+if not assigned m then
+    m := 1;
+end if;
+
+if Type(m) eq MonStgElt then
+    m := StringToInteger(m);
+end if;
+
+if not assigned OUTPUT_FILE then
+    OUTPUT_FILE := "stoll-" cat Sprint(m) cat ".log";
+end if;
+
+print "Running Stoll/Bisatt-style optional search for C_a : y^2 = x^5 + a.";
+print "Block m =", m;
+print "Writing selected candidates to", OUTPUT_FILE;
 
 SetClassGroupBounds("GRH");
-
-m := StringToInteger(m);
-
 
 _<x> := PolynomialRing(Rationals());
 
@@ -30,7 +40,7 @@ end function;
 
 admissible := [ a : a in squarefree | #pts(a) ge 3];
 
-gd := Open("stoll-" cat Sprint(m) cat ".log","w");
+gd := Open(OUTPUT_FILE, "w");
 
 for a in admissible do
 	if RootNumber(a) eq (-1)^(#pts(a)+1) then
@@ -42,3 +52,4 @@ for a in admissible do
 	end if;
 end for;
 
+print "Finished Stoll/Bisatt-style optional search.";

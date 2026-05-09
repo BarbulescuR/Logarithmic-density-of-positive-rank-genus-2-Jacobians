@@ -1,7 +1,10 @@
 /*
-objective : auxiliary file used in StollStats.m
-reference : Matthuew Bisatt. Journal de Théorie des Nombres de Bordeaux 34 (2022), 575–582 
-             Root number of the Jacobian of y2 = x^p + a
+Purpose: helper implementing Bisatt's root-number formula for Jac(y^2 = x^p + a).
+Paper location: Section 3.2.1 helper loaded by StollStats.m and run_examples.py smoke.
+Usage: load "RootNumber.m";
+Output: defines RootNumber(a : p := 5).
+Reference: Matthew Bisatt, Root number of the Jacobian of y^2 = x^p + a,
+Journal de Théorie des Nombres de Bordeaux 34 (2022), 575–582.
 */
 
 // RootNumber of Jac(Hyp(x^p+a))

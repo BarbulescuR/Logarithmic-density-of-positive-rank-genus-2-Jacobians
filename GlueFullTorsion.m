@@ -1,8 +1,8 @@
 /*
-objective : auxiliary file used in HighRankSplitJacobianExamples.m
-            It illustrates Proposition 2.18. 
-reference : Everett  W  Howe,  Franck  Lepr ́evost,  and  Bjorn  Poonen,  Large  torsion  subgroups  of
-             splitJacobians of curves of genus two or three, Forum Mathematicum 3 (2000
+Purpose: helper implementing the full-rational-2-torsion gluing construction used in Proposition 2.18.
+Input: two split cubic polynomials and ordered lists of their roots.
+Output: a sextic polynomial defining the glued genus-2 curve.
+Note: this is a helper loaded by HighRankSplitJacobianExamples.m.
 */
 
 function glue_full_torsion(f,g,roots_f,roots_g)
@@ -32,6 +32,5 @@ function glue_full_torsion(f,g,roots_f,roots_g)
           (AA*(a1-a3)*(a3-a2)*x^2+BB*(b1-b3)*(b3-b2));
     return h;
 end function;
-
 
 

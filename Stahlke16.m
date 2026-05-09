@@ -1,6 +1,10 @@
 /*
-objective : auxiliary file used by HighRankSimpleJacobianExamples.m
-reference : Colin Stahlke, Algebraic curves over Q with many rational points and minimal automorphism group, International Mathematics Research Notices, 1997.
+Purpose: Stahlke genus-2 curve data used by HighRankSimpleJacobianExamples.m.
+Paper location: Appendix A.1 curve/example data file.
+Usage: load "Stahlke16.m";
+Output: defines f, C, Ps, and Qs for the rank/height helper.
+Reference: Colin Stahlke, Algebraic curves over Q with many rational points
+and minimal automorphism group, International Mathematics Research Notices, 1997.
 */
 
 name := "Stahlke22";

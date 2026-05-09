@@ -1,63 +1,71 @@
-# Logarithmic Density of Rank ≥ 1 and Rank ≥ 2 Genus-2 Jacobians  
-## Applications to Hyperelliptic Curve Cryptography
+# Logarithmic Density of Positive-Rank Genus-2 Jacobians
 
-**Online supplement** of the article  
-*“Logarithmic Density of Rank ≥ 1 and Rank ≥ 2 Genus-2 Jacobians and Applications to Hyperelliptic Curve Cryptography”*  
+Online supplement to:
 
-by R. Barbulescu, M. Barcau, V. Pașol, and G. Turcaș.
+**Logarithmic Density of Rank ≥ 1 and Rank ≥ 2 Genus-2 Jacobians and Applications to Hyperelliptic Curve Cryptography**
+R. Barbulescu, M. Barcau, V. Pașol, and G. Turcaș.
 
-Software: Magma for *.m files, sage for *.sage and pari/gp for *.gp files.
+## What this repository contains
 
-**Abstract** the main scripts are HighRankSimpleJacobianExamples.m and HighRankSplitJacobianExamples.m
-They run the examples in Appendix A. The rest of the files are auxiliary.
+This repository contains Magma, PARI/GP, and data files used to reproduce and inspect the computational examples accompanying the paper. The scripts illustrate the examples and computations discussed in Section 3 and Appendix A; they are not used as proofs of the density theorems.
 
+## Requirements
 
-Description of the files:
+Core examples:
+- Magma, version V2.29-7 in the latest validation environment.
 
-   - utils.m ---> |a list of functions to compute the degree of a rational fraction 
-                  |and the naive height of the largest coefficient
-   - PolySqrt.m ---> Given a polynomial P, computes a polynomial Q such that deg(P-Q^2) < deg(Q).
+Optional examples:
+- PARI/GP, version 2.17.2 in the latest validation environment, for `.gp` timing/comparison files.
 
-   
-   - Stahlke16.m |
-   - Stoll22.m   |
-   - Dreier25.m  |
-   - Elkies26.m  |                 
-   - Elkies29gen2.m  |---> |genus-2 curves with simple Jacobian defined over Q(t) of rank >= 16, 22, 25, 26 and respectively 29
-   
-    - GlueFullTorsion.m --->  |a function which, given two elliptic curves F and G
-                              |with full rational 2-tprsion over a field k, outputs
-                              |a genus-2 curve C defined over k such that
-                              |Jac(C)=_k E1 x E2
-   
-   - Elkies15.m ---> an elliptic curve over Q of rank 15 with full rational 2-torsion
-   
-   - Kihara6.m ---> an elliptic curve over Q(t) of rank 6 with full rational 2-torsion
+## Quick start with Magma
 
-   - HighRankSimpleJacobianExamples.m ---> a list of examples of genus-2 curves from the literature and an evaluation of their naive height
-    
-   - HightRankSimpleJacobianExamples.m --->
-                     two examples of genus-2 curves with split Jacobian obtained by gluing from elliptic curves with full 2-torsion
+```bash
+git clone https://github.com/BarbulescuR/Logarithmic-density-of-positive-rank-genus-2-Jacobians.git
+cd Logarithmic-density-of-positive-rank-genus-2-Jacobians
 
-   - RootNumber.m ---> computation of rank(Jac(x^5+a)) using Bisatt's closed formula
+python3 run_examples.py --list
+python3 run_examples.py --task smoke
+python3 run_examples.py --task core
+```
 
-   - StollStats.m ---> Seatch of values of *a* such that *Ca: y^2=x^5+a* has high rank.
+## What the driver script does
 
-   - stoll.log ---> list of integers a in [1,10^5] with >= 3 rational points of height less than 500 and root number opposed to the parity of the                             previously found points. Each line is of the form "a rank(Jac(Ca))"
-   
-   - stollhecke.gp ---> written by Aurel Page, the script computes the L-function of Jac(y^2=x^5+a)
-   
-   - RootNumber.gp ---> timing of computing the L-function of a genus-2 curves
+`run_examples.py` is the preferred entry point. It prints what each task does, which paper section or appendix it supports, the exact command it runs, and where the full output is stored. The script is verbose by default and stores outputs in `outputs/<timestamp>/`.
 
-   - genus1rank2.dat | 
-   - genus2rank2.dat |---> the LMFDB data to estimate the logarithmic density of rank 2 curves.
-                            Numerically, one sees that it is larger
-                            for genus-2 curves than for elliptic curves.
-                            This  corroborates with the fact that Watkins conjectured
-                             a logarithmic density of 3/4 for elliptic curves
-                             and we prove a log. density >= 5/7 for genus-2 curves.
-     
-   - RubinSilverberg2001.sage ---> list of twists over Q(t) of rank 2 and 3 of given elliptic curves over Q. The scripts allow to test experimentally that the probability to have rank r0+r in a family of twists of rank r0 is the same as the probability to have rank r in the set of all twists 
-  
-   - search-non-torsion.m ---> the script searches examples as in Remark 2.2. For them alpha is rational and is non-torsion for all polynomials h(x) with coefficients in {0,&}.
-  
+- `smoke` — loads `RootNumber.m` in Magma and prints `RootNumber(a)` for `a = 1,...,10`; this only checks that Magma can load the local code.
+- `split` — runs `HighRankSplitJacobianExamples.m` for the Appendix A.2 / Lemma A.1 gluing examples.
+- `simple` — runs `HighRankSimpleJacobianExamples.m` for the Appendix A.1 high-rank simple genus-2 Jacobian examples.
+- `core` — runs `smoke`, `split`, and `simple` in that order.
+- `stoll` — optionally runs `StollStats.m` for one block parameter `m` in the Section 3.2.1 family `C_a : y^2 = x^5 + a`.
+- `rootnumber-gp` — optionally runs `RootNumber.gp`, a PARI/GP timing/comparison script.
+
+## Running individual Magma files directly
+
+```bash
+magma HighRankSplitJacobianExamples.m
+magma HighRankSimpleJacobianExamples.m
+magma "m:=3" StollStats.m
+```
+
+The Python driver is preferred because it logs commands and output and avoids overwriting generated logs in the repository root.
+
+## Reproducibility scope
+
+- `HighRankSimpleJacobianExamples.m` supports Appendix A.1.
+- `HighRankSplitJacobianExamples.m` supports Appendix A.2 / Lemma A.1.
+- `StollStats.m` supports the optional Section 3.2.1 computations for `C_a : y^2 = x^5 + a`.
+- `stollhecke.gp` is optional and illustrates a Hecke-character approach; it is not part of the default reproduction path.
+
+The latest validation experiments were run on `lehner`, a University of Warwick machine. We thank John Cremona for providing one of the authors access to this server.
+
+## Documentation note
+
+The Python driver script and the repository documentation polish in this revision were prepared with assistance from GPT-5.5 (OpenAI Codex).
+
+## File inventory
+
+See [`FILES.md`](FILES.md).
+
+## License
+
+GPL-3.0.
