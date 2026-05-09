@@ -22,7 +22,6 @@ Optional examples:
 ```bash
 git clone https://github.com/BarbulescuR/Logarithmic-density-of-positive-rank-genus-2-Jacobians.git
 cd Logarithmic-density-of-positive-rank-genus-2-Jacobians
-git checkout temporary
 
 python3 run_examples.py --list
 python3 run_examples.py --task smoke
