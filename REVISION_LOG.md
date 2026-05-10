@@ -1,14 +1,10 @@
 ## Repository polish for ANTS revision — 2026-05-07
 
-Branch: temporary
-Starting commit: e64eb8bb8fed7901b37123e53f72abe5148238aa
-Goal: improve reproducibility, README, user-facing driver script, and minimal in-code documentation in response to ANTS software-review comments.
 
 Validation experiments that required Magma or PARI/GP were run on `lehner`, a University of Warwick machine.
 
 ### Work log
 
-- Initialized this revision log after confirming the branch is `temporary` and `git pull --ff-only origin temporary` was up to date.
 - Added a standard-library-only `run_examples.py` driver with `smoke`, `split`, `simple`, `core`, `stoll`, and `rootnumber-gp` tasks.
 - Replaced the README with concise setup and reproducibility instructions and moved the detailed inventory into `FILES.md`.
 - Added `COMPUTATIONAL_ENVIRONMENT.md` and `.gitignore`.
@@ -20,9 +16,6 @@ Validation experiments that required Magma or PARI/GP were run on `lehner`, a Un
 
 ### Validation
 
-- `git status` — clean at start, on branch `temporary`.
-- `git branch --show-current` — `temporary`.
-- `git pull --ff-only origin temporary` — already up to date.
 - Python version recorded: `Python 3.14.2`.
 - Magma version on `lehner`: `V2.29-7`.
 - PARI/GP version on `lehner`: `GP/PARI CALCULATOR Version 2.17.2 (released)`.
@@ -64,5 +57,3 @@ Validation experiments that required Magma or PARI/GP were run on `lehner`, a Un
 - `search-non-torsion.m` — clarify optional/exploratory header only.
 - `stollhecke.gp` — clarify optional PARI/GP header only.
 - `utils.m` — clarify helper header and assert rational square checks before constructing points from `xs`.
-
-Ending commit: created after this log entry is committed; see the final pushed commit on `origin/temporary`.
