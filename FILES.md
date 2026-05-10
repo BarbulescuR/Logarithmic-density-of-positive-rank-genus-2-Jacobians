@@ -2,7 +2,7 @@
 
 ## Main entry point
 
-- `run_examples.py` — verbose driver for the reproducibility examples.
+- `run_examples.py` — verbose driver for the reproducibility examples written with the assistance of GPT 5.5 (OpenAI CodeX).
 
 ## Core Magma scripts
 
@@ -40,4 +40,4 @@
 
 ## Generated outputs
 
-`run_examples.py` writes timestamped output directories under `outputs/`. These generated directories are ignored by Git.
+`run_examples.py` writes timestamped output directories under `outputs/`. These generated directories are ignored by Git and therefore not present here.
