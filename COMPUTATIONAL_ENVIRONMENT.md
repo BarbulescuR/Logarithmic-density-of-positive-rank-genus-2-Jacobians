@@ -1,6 +1,6 @@
 # Computational environment
 
-The core scripts require Magma. Optional timing/comparison scripts use PARI/GP.
+The core scripts require Magma. Some of the optional scripts use PARI/GP.
 
 The latest validation experiments were run on `lehner`, a University of Warwick machine.
 
