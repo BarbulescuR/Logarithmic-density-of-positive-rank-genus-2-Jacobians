@@ -26,9 +26,7 @@ Validation experiments that required Magma or PARI/GP were run on `lehner`, a Un
 - `python3 run_examples.py --task simple` — succeeded on `lehner` with Magma V2.29-7 in 425.77 seconds; wrote all five Appendix A.1 summary rows to `Families-list.log`.
 - `python3 run_examples.py --task rootnumber-gp` — succeeded on `lehner` with PARI/GP 2.17.2; the saved output includes PARI warnings about unknown conductor valuation at 2 and a final timing value.
 - `python3 run_examples.py --task stoll --m 1` — run on `lehner` for the eight-hour validation cap; it produced a partial `stoll-1.log` with 73 candidate lines before the timeout stopped the still-running Magma computation.
-- The long runtime is consistent with the script's repeated rational-point searches and the expensive `MordellWeilGroup(J)` computations for selected Jacobians.
-- `git diff --check` — initially found one README trailing-space line; fixed, then reran successfully.
-- `git status` — confirmed all intended changes were present before staging and no `outputs/` directory was staged.
+- The long runtime is due to the script's repeated rational-point searches and mostly due to the expensive `MordellWeilGroup(J)` computations for selected Jacobians.
 
 ### Files changed
 
